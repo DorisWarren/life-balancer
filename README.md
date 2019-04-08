@@ -81,6 +81,7 @@ _NOT_ someone else’s entries.
 * User can choose a subset of categories to track
 * Single category graph to show change over time
 * Graph showing average in each category
+* Sign-in persistence so user doesn't have to sign in each time 
 
 ### Development Plan
 1. Solidify MVP
