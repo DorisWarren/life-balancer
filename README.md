@@ -3,7 +3,7 @@
 #### Javascript / Angular / Firebase team project for Epicodus
 
 _Published_ **Apr 11 2019**<br>
-_Authors_ **Gary Bermudez, Chris Breaux, Nathan Nielson, Tracy Reith, Doris Warren **
+_Authors_ **Gary Bermudez, Chris Breaux, Nathan Nielson, Tracy Reith, Doris Warren**
 
 1. [Description](#description)
 1. [Learning Objective](#learning-objective)
