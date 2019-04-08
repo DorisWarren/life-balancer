@@ -10,7 +10,7 @@ _Authors_ **Gary Bermudez, Chris Breaux, Nathan Nielson, Tracy Reith, Doris Warr
 1. [Target Audience](#target-audience)
 1. [User Stories](#user-stories)
 1. [Product Requirements](#product-requirements)
-1.[Non-technical Requirements](#non-technical-requirements)
+1. [Non-technical Requirements](#non-technical-requirements)
 1. [Stretch Goals](#stretch-goals)
 1. [Development Plan](#development-plan)
 1. [Whiteboard](#whiteboard)
