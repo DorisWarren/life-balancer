@@ -17,18 +17,14 @@ img {
   animation-duration: 10s;
   animation-iteration-count: infinite;
 }
+
 img:hover {
   animation-name: icons;
 }
 
-
-@keyframes icons {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+h1 {
+  animation-name: example;
+  animation-duration: 2s;
 }
 
 .welcome {
@@ -50,8 +46,8 @@ img:hover {
   position: relative;
   align-items: center;
   width: 100%;
-    margin-top: 10%;
-  margin-bottom: 10%;
+  margin-bottom: 5%;
+  margin-top:15%;
   color: white;
   letter-spacing: .2em;
   font-size: 14px;
@@ -60,14 +56,41 @@ img:hover {
 
 .social {
  align-self: flex-start;
- margin-left: -8%
+ margin-top: 10%;
+ margin-left: -5%
 }
 
 
 .financial {
- align-self: flex-end;
+ // align-self: flex-end;
  transform: rotate(-20deg);
+ margin-left: 70%;
+ img {
+   width: 20vw;
+   height: 20vw;
+
+ }
+
 }
+
 button {
   margin-top: 5%;
+}
+@keyframes example {
+  from {
+    color: yellow;
+    font-size: 20px;
+  }
+  to {
+    color: white;
+  }
+}
+
+@keyframes icons {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
