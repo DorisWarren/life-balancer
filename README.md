@@ -57,10 +57,10 @@ _NOT_ someone else’s entries.
 ### Product Requirements
 * The user will be able to create an account
 * The user should be able to indicate and submit satisfaction level for each category
-* The system should include questions in each category to help people assess their satisfaction level
+* The system should include questions in each category to help people assess their satisfaction level for that category
 * The system will require the user to provide a satisfaction level for each category in order to save the user’s data
 * The system will allow the user to make changes in each category before final submission
-* The user can create a new graph
+* The user can create a new assessment
 * The user can retrieve and compare all previous graphs
 * The user will not be able to make changes to saved data
 
@@ -68,7 +68,6 @@ _NOT_ someone else’s entries.
 ### Non-technical Requirements
 * The application should be self-apparent how to use
 * Mobile first visual and usability design
-
 
 #### Assumptions
 * We will code for mobile first, but deploy for a desktop application
