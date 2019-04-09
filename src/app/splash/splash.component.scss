@@ -24,7 +24,7 @@ img:hover {
 
 h1 {
   animation-name: example;
-  animation-duration: 2s;
+  animation-duration: 4s;
 }
 
 .welcome {
@@ -36,7 +36,7 @@ h1 {
   width: 100%;
   color: white;
   letter-spacing: .2em;
-  font-size: 40px;
+  font-size: 50px;
   text-align: center;
 }
 
@@ -55,35 +55,47 @@ h1 {
 }
 
 .social {
- align-self: flex-start;
  margin-top: 10%;
  margin-left: -5%
 }
 
-
 .financial {
- // align-self: flex-end;
  transform: rotate(-20deg);
  margin-left: 70%;
- img {
-   width: 20vw;
-   height: 20vw;
-
- }
-
+}
+.work {
+  transform: rotate(20deg);
 }
 
 button {
   margin-top: 5%;
 }
 @keyframes example {
-  from {
-    color: yellow;
-    font-size: 20px;
-  }
-  to {
-    color: white;
-  }
+  0% {
+   color: red;
+   font-size: 20px;
+ }
+ 15% {
+   color: orange;
+ }
+ 30% {
+   color: yellow;
+ }
+ 45% {
+   color: green;
+ }
+ 60% {
+   color: blue;
+ }
+ 75% {
+   color: indigo;
+ }
+ 90% {
+   color: violet;
+ }
+ 100% {
+   color: white;
+ }
 }
 
 @keyframes icons {
