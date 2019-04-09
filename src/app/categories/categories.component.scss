@@ -1,5 +1,5 @@
 .container {
-  height: 100em;
+  height: 250em;
   display: flex;
   flex-direction: column;
   border: 1px solid red;
@@ -9,19 +9,21 @@
   background-color: #b2d8d8;
     .category {
         text-align: center;
-        
-        
-        
+        margin-bottom: 10em;
+
+
+
     h1  {
     position: absolute;
     color: white;
     letter-spacing: .2em;
     font-size: 4vw;
   }
-    
+
   img {
     width: 30vw;
     height: 30vw;
+    margin-bottom: 5em;
   }
  }
 }
