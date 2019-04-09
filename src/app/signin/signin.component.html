@@ -1,4 +1,11 @@
-<p>
-  signin works!
-</p>
-<a routerLink="/Categories">Cats</a>
+<form [formGroup]="signInForm" (ngSubmit)="onSubmit()">
+  <label>
+    Email:
+    <input type="text" formControlName="email" #email>
+  </label>
+
+  <button type="submit">Submit</button>
+
+</form>
+
+  
