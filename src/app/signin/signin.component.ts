@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
+import { CategoriesComponent } from '../categories/categories.component';
+
 
 @Component({
   selector: 'app-signin',

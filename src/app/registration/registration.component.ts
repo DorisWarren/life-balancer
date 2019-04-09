@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import { UserInfoService } from '../user-info.service';
+import { Routes, RouterModule } from '@angular/router';
+import { CategoriesComponent } from '../categories/categories.component';
 
 @Component({
   selector: 'app-registration',

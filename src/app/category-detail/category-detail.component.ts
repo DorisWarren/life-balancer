@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
+import { ConfirmationComponent } from '../confirmation/confirmation.component';
+
 
 @Component({
   selector: 'app-category-detail',
