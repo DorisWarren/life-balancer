@@ -22,12 +22,13 @@ export class SigninComponent implements OnInit {
 
   constructor(private userInfoService: UserInfoService, private routes: Router) { }
 
+  getResults = () =>
+  this.userInfoService.getUserByName().subscribe(res => (this.resultsFromDatabase = res));
+
   ngOnInit() {
     this.getResults();
 }
 
-getResults = () =>
-  this.userInfoService.getUserByName().subscribe(res => (this.resultsFromDatabase = res));
 
   onSubmit() {
     let routes = this.routes;
@@ -35,21 +36,18 @@ getResults = () =>
     let emailInput = this.signInForm.value;
     console.log(emailInput);
     // console.log(this.resultsFromDatabase);
-
-    this.resultsFromDatabase.forEach(function(entry) {
-      console.log(entry.payload.doc.data().email);
-      if (emailInput.email === entry.payload.doc.data().email) {
+    for (let i=0; i<=this.resultsFromDatabase.length-1; i++)
+     {
+      console.log(this.resultsFromDatabase[i].payload.doc.data().email);
+      if (emailInput.email === this.resultsFromDatabase[i].payload.doc.data().email) {
         routes.navigate(['results']);
-        // console.log('if you got this far, you should get results');
+        console.log('if you got this far, you should get results');
       }
       else {
         routes.navigate(['register']);
-        // console.log('if you see this, you should go to registration');
+        console.log('if you see this, you should go to registration');
       }
 
-
-    });
-
+    }
   }
-
 }
