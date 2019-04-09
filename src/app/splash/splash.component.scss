@@ -6,15 +6,33 @@
   align-content: center;
   align-items: center;
   text-transform: uppercase;
-  background-color: #b2d8d8;
+  background-image: linear-gradient(#b2d8d8, #66b2b2);
   img {
-    width: 40vw;
-    height: 40vw;
+    width: 30vw;
+    height: 30vw;
+  }
+}
+
+img {
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+img:hover {
+  animation-name: icons;
+}
+
+
+@keyframes icons {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
 
 .welcome {
-  margin-top: 10%;
+  margin-top: 15%;
   display: flex;
   flex-direction: column;
   position: absolute;
@@ -22,7 +40,7 @@
   width: 100%;
   color: white;
   letter-spacing: .2em;
-  font-size: 30px;
+  font-size: 40px;
   text-align: center;
 }
 
@@ -32,26 +50,24 @@
   position: relative;
   align-items: center;
   width: 100%;
+    margin-top: 10%;
+  margin-bottom: 10%;
   color: white;
   letter-spacing: .2em;
   font-size: 14px;
   text-align: center;
 }
 
-#social {
+.social {
  align-self: flex-start;
  margin-left: -8%
 }
 
-#financial {
+
+.financial {
  align-self: flex-end;
- margin-right: -10%;
  transform: rotate(-20deg);
 }
-
-#work {
- align-self: flex-start;
- transform: rotate(30deg);
- margin-left: -5%;
- margin-bottom: -5%;
+button {
+  margin-top: 5%;
 }
