@@ -22,10 +22,20 @@
   <button (click)="showUsersInDatabase()">ClickMe!</button>
 
 </p>
+
+
+  <label for="my-name">My Name</label>
+  <input id="my-name" #myName>
+  <button (click)="getUserInDatabase()">Get My Results</button>
+<p>
+
 <a routerLink="/Categories">Cats</a>
 
 
 <div *ngFor="let entry of resultsFromDatabase">
-  <p>{{entry.payload.doc.data().firstName}}</p>
-  <p>{{entry.payload.doc.data().satisfaction}}</p>
+  <div *ngIf="myName.value === entry.payload.doc.data().firstName">
+    <p>{{entry.payload.doc.data().firstName}} {{entry.payload.doc.data().lastName}}</p>
+    <p>{{entry.payload.doc.data().satisfaction}}</p>
+
+  </div>
 </div>

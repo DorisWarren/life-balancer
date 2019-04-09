@@ -45,4 +45,7 @@ export class RegistrationComponent implements OnInit {
   getResults = () =>
     this.userInfoService.getUserByName().subscribe(res => (this.resultsFromDatabase = res));
 
+    getUserInDatabase() {
+      console.log('stuff goes here');
+    }
 }
