@@ -16,9 +16,12 @@ export class RegistrationComponent implements OnInit {
     satisfaction: new FormControl('5'),
   });
 
+  resultsFromDatabase;
+
   constructor(private userInfoService: UserInfoService) { }
 
   ngOnInit() {
+    this.getResults();
   }
 
   onSubmit() {
@@ -33,5 +36,13 @@ export class RegistrationComponent implements OnInit {
         });
 
   }
+
+  showUsersInDatabase() {
+    // this.resultsFromDatabase = this.userInfoService.getUserByName();
+    console.log(this.resultsFromDatabase);
+  }
+
+  getResults = () =>
+    this.userInfoService.getUserByName().subscribe(res => (this.resultsFromDatabase = res));
 
 }
