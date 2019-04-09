@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
+import { UserInfoService } from '../user-info.service';
 
 @Component({
   selector: 'app-registration',
@@ -13,7 +14,7 @@ export class RegistrationComponent implements OnInit {
     satisfaction: new FormControl('5'),
   });
 
-  constructor() { }
+  constructor(private userInfoService: UserInfoService) { }
 
   ngOnInit() {
   }
@@ -21,7 +22,13 @@ export class RegistrationComponent implements OnInit {
   onSubmit() {
     //event emiiter or update database here
     console.log(this.registrationForm.value);
-    this.registrationForm.reset();
+    let data = this.registrationForm.value;
+
+    this.userInfoService.createNewUser(data)
+        .then(res => {
+          this.registrationForm.reset();
+
+        });
 
   }
 
