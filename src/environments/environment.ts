@@ -5,12 +5,20 @@
 export const environment = {
   production: false,
   firebaseConfig: {
+
     apiKey: "AIzaSyAnhYIk9Q5aIlE3OedZN9EYXSkxqfsfwtk",
       authDomain: "albums-store-87270.firebaseapp.com",
       databaseURL: "https://albums-store-87270.firebaseio.com",
       projectId: "albums-store-87270",
       storageBucket: "albums-store-87270.appspot.com",
       messagingSenderId: "441692388021"
+      // apiKey: "AIzaSyBkpZv_c75gxa--_nnpaKzA2ATagZohRr0",
+      // authDomain: "lb-test-f9c4b.firebaseapp.com",
+      // databaseURL: "https://lb-test-f9c4b.firebaseio.com",
+      // projectId: "lb-test-f9c4b",
+      // storageBucket: "lb-test-f9c4b.appspot.com",
+      // messagingSenderId: "344240714940"
+
   }
 };
 
