@@ -5,7 +5,12 @@
 export const environment = {
   production: false,
   firebaseConfig: {
-  //firebase info here//
+    apiKey: "AIzaSyAnhYIk9Q5aIlE3OedZN9EYXSkxqfsfwtk",
+      authDomain: "albums-store-87270.firebaseapp.com",
+      databaseURL: "https://albums-store-87270.firebaseio.com",
+      projectId: "albums-store-87270",
+      storageBucket: "albums-store-87270.appspot.com",
+      messagingSenderId: "441692388021"
   }
 };
 
