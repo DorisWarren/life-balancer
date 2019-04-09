@@ -20,6 +20,8 @@ export class RegistrationComponent implements OnInit {
   onSubmit() {
     //event emiiter or update database here
     console.log(this.registrationForm.value);
+    this.registrationForm.reset();
+
   }
 
 }
