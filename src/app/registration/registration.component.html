@@ -10,6 +10,11 @@
   </label>
 
   <label>
+    Email:
+  <input type="text" formControlName="email">
+  </label>
+
+  <label>
     Satisfaction Level(1-10)
   <input type="range" min="1" max="10" step="1" value="5" formControlName="satisfaction">
   </label>
@@ -29,13 +34,17 @@
   <button (click)="getUserInDatabase()">Get My Results</button>
 <p>
 
-<a routerLink="/Categories">Cats</a>
-
+<p>
+  <a routerLink="/categories">Cats</a>
+</p>
+<p>
+  <a routerLink="/signin">Sign In</a>
+</p>
 
 <div *ngFor="let entry of resultsFromDatabase">
   <div *ngIf="myName.value === entry.payload.doc.data().firstName">
-    <p>{{entry.payload.doc.data().firstName}} {{entry.payload.doc.data().lastName}}</p>
-    <p>{{entry.payload.doc.data().satisfaction}}</p>
+    <p> Welcome back {{entry.payload.doc.data().firstName}} {{entry.payload.doc.data().lastName}}</p>
+
 
   </div>
 </div>

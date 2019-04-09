@@ -13,6 +13,7 @@ export class RegistrationComponent implements OnInit {
   registrationForm = new FormGroup ({
     firstName: new FormControl(''),
     lastName: new FormControl(''),
+    email: new FormControl(''),
     satisfaction: new FormControl('5'),
   });
 
@@ -37,6 +38,7 @@ export class RegistrationComponent implements OnInit {
 
   }
 
+// temporary button to experiment with getting user by name from database
   showUsersInDatabase() {
     // this.resultsFromDatabase = this.userInfoService.getUserByName();
     console.log(this.resultsFromDatabase);
@@ -46,6 +48,6 @@ export class RegistrationComponent implements OnInit {
     this.userInfoService.getUserByName().subscribe(res => (this.resultsFromDatabase = res));
 
     getUserInDatabase() {
-      console.log('stuff goes here');
+      console.log('placeholder');
     }
 }
