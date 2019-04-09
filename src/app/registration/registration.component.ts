@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormControl } from '@angular/forms';
+import { UserInfoService } from '../user-info.service';
 import { Routes, RouterModule } from '@angular/router';
 import { CategoriesComponent } from '../categories/categories.component';
 
@@ -8,10 +10,28 @@ import { CategoriesComponent } from '../categories/categories.component';
   styleUrls: ['./registration.component.scss']
 })
 export class RegistrationComponent implements OnInit {
+  registrationForm = new FormGroup ({
+    firstName: new FormControl(''),
+    lastName: new FormControl(''),
+    satisfaction: new FormControl('5'),
+  });
 
-  constructor() { }
+  constructor(private userInfoService: UserInfoService) { }
 
   ngOnInit() {
+  }
+
+  onSubmit() {
+    //event emiiter or update database here
+    console.log(this.registrationForm.value);
+    let data = this.registrationForm.value;
+
+    this.userInfoService.createNewUser(data)
+        .then(res => {
+          this.registrationForm.reset();
+
+        });
+
   }
 
 }
