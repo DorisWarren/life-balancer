@@ -1,4 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
+import { SigninComponent } from '../signin/signin.component';
+import { RegistrationComponent} from '../registration/registration.component';
+
+
+
+
 
 @Component({
   selector: 'app-splash',

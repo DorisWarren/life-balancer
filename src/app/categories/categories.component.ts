@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
+import { CategoryDetailComponent } from '../category-detail/category-detail.component';
 
 @Component({
   selector: 'app-categories',
