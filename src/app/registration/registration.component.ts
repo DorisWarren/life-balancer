@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-registration',
@@ -6,10 +7,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./registration.component.scss']
 })
 export class RegistrationComponent implements OnInit {
+  registrationForm = new FormGroup ({
+    firstName: new FormControl(''),
+    lastName: new FormControl(' '),
+  });
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  onSubmit() {
+    //event emiiter or update database here
+    console.log(this.registrationForm.value);
   }
 
 }
