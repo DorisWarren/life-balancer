@@ -81,11 +81,12 @@ _NOT_ someone else’s entries.
 * User can choose a subset of categories to track
 * Single category graph to show change over time
 * Graph showing average in each category
+* Sign-in persistence so user doesn't have to sign in each time
 
 ### Development Plan
-1. Solidify MVP
-1. Set up Github repository
-1. Build component tree
+1. ~~Solidify MVP~~ _DONE_
+1. ~~Set up Github repository~~ _DONE_
+1. ~~Build component tree~~ _DONE_
 1. Research technologies we don’t already know, e.g. Angular Material, Auth/Auth
 1. Collect content
 1. Design app layout - mobile
@@ -96,7 +97,7 @@ _NOT_ someone else’s entries.
 1. Connect to database
 
 ### Whiteboard
-![App Design](./img/app-plan-whiteboard.png?raw=true "App Plan Whiteboardt")
+![App Design](./img/app-plan-whiteboard.png?raw=true "App Plan Whiteboard")
 
 ### Installation
 https://github.com/cjbreaux/life-balancer.git
