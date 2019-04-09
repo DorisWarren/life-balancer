@@ -17,5 +17,9 @@ export class UserInfoService {
     });
   }
 
+  getUserByName() {
+    return this.firestore.collection("users").snapshotChanges();
+  }
+
 
 }
