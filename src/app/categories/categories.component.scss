@@ -1,0 +1,37 @@
+.container {
+  height: 100em;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid red;
+  align-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  background-color: #b2d8d8;
+    .category {
+        text-align: center;
+        
+        
+        
+    h1  {
+    position: absolute;
+    color: white;
+    letter-spacing: .2em;
+    font-size: 4vw;
+  }
+    
+  img {
+    width: 30vw;
+    height: 30vw;
+  }
+ }
+}
+
+
+
+p {
+  // position: relative;
+}
+
+//button {
+//  position: relative;
+//}

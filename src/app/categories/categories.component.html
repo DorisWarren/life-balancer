@@ -1,4 +1,13 @@
-<p>
-  categories works!
-</p>
-<a routerLink="/Category-detail">details</a>
+<div class="container">
+
+    <div class="category" *ngFor="let category of categories">
+        <h2>{{category.title}}</h2>
+        <p>
+          {{category.description}}
+        </p>
+            <img id="financial" src="./assets/images/{{category.img}}" alt="">
+        <br>
+
+        <button type="button" name="button"> <a routerLink="/Category-detail">TEST</a></button>
+     </div>
+</div>
