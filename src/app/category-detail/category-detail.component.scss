@@ -1,0 +1,31 @@
+.category-detail {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  text-transform: uppercase;
+  background-color: #b2d8d8;
+  letter-spacing: .2em;
+  font-size: 30px;
+  text-align: center;
+}
+h4{
+  font-weight: lighter;
+  padding-bottom: 45px;
+}
+.social {
+  ul{
+    list-style-type: none;
+    li{
+      padding-bottom: 45px;
+    }
+  }
+}
+
+mat-slider{
+
+}
+
+img {
+  float: left;
+  opacity: 0.5;
+}
