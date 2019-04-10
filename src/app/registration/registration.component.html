@@ -10,6 +10,11 @@
   </label>
 
   <label>
+    Email:
+  <input type="text" formControlName="email">
+  </label>
+
+  <label>
     Satisfaction Level(1-10)
   <input type="range" min="1" max="10" step="1" value="5" formControlName="satisfaction">
   </label>
@@ -17,7 +22,29 @@
   <button type="submit">Submit</button>
 
 </form>
+
 <p>
-  registration works!
+  <button (click)="showUsersInDatabase()">ClickMe!</button>
+
 </p>
-<a routerLink="/Categories">Cats</a>
+
+
+  <label for="my-name">My Name</label>
+  <input id="my-name" #myName>
+  <button (click)="getUserInDatabase()">Get My Results</button>
+<p>
+
+<p>
+  <a routerLink="/categories">Cats</a>
+</p>
+<p>
+  <a routerLink="/signin">Sign In</a>
+</p>
+
+<div *ngFor="let entry of resultsFromDatabase">
+  <div *ngIf="myName.value === entry.payload.doc.data().firstName">
+    <p> Welcome back {{entry.payload.doc.data().firstName}} {{entry.payload.doc.data().lastName}}</p>
+
+
+  </div>
+</div>

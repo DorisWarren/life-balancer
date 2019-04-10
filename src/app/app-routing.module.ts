@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { Routes, RouterModule, Router } from '@angular/router';
 import { SplashComponent } from './splash/splash.component';
 import { CategoriesComponent } from './categories/categories.component';
 import { CategoryDetailComponent } from './category-detail/category-detail.component';
@@ -18,27 +18,27 @@ const routes: Routes = [
     component: SplashComponent
   },
  {
-   path: 'Register',
+   path: 'register',
    component: RegistrationComponent
  },
  {
-    path: 'Signin',
+    path: 'signin',
     component: SigninComponent
   },
  {
-   path: 'Categories',
+   path: 'categories',
    component: CategoriesComponent
  },
  {
-    path: 'Category-detail',
+    path: 'category-detail',
     component: CategoryDetailComponent
   },
  {
-   path: 'Confirmation',
+   path: 'confirmation',
    component: ConfirmationComponent
  },
  {
-    path: 'Results',
+    path: 'results',
     component: ResultsComponent
   }
 
@@ -50,4 +50,7 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+
+
+}
