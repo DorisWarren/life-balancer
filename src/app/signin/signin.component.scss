@@ -45,10 +45,14 @@ p{
   margin-top: 20px;
 }
 h1  {
+  font-size: 100px;
+  font-weight: 400;
+  animation-name: example;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
   text-align: center;
+  margin-top: 10%;
   color: white;
-  margin-top:50px;
- font-size: 50px;
 }
 
 @keyframes icons {

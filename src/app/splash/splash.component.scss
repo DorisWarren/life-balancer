@@ -22,11 +22,6 @@ img:hover {
   animation-name: icons;
 }
 
-// h1 {
-//   animation-name: example;
-//   animation-duration: 4s;
-// }
-
 .welcome {
   display: flex;
   flex-direction: column;
@@ -39,9 +34,11 @@ img:hover {
   letter-spacing: .2em;
   text-align: center;
   h1 {
-    font-size: 70px;
+    font-size: 100px;
+    font-weight: 400;
     animation-name: example;
-    animation-duration: 4s;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
   }
 }
 
@@ -57,6 +54,7 @@ img:hover {
   letter-spacing: .2em;
   font-size: 14px;
   text-align: center;
+  color: #00254e
 }
 
 .social {
@@ -84,8 +82,7 @@ button {
 
 @keyframes example {
   0% {
-   color: red;
-   // font-size: 20px;
+   color: #008181
  }
  15% {
    color: #008181;

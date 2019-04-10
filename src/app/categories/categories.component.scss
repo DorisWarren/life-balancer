@@ -9,20 +9,24 @@
     .category {
         text-align: center;
         margin-bottom: 10em;
+        color: #00254e;
 
 
+    h2  {
 
-    h1  {
-    position: absolute;
     color: white;
     letter-spacing: .2em;
     font-size: 4vw;
+
   }
 
   img {
     width: 30vw;
     height: 30vw;
     margin-bottom: 5em;
+    animation-name: bounce-1;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
   }
  }
 }
