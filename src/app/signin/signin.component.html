@@ -1,14 +1,14 @@
 
 <div class="container">
   <div class="junbotrom">
+    <p>Please enter your email and password:</p>
     <form [formGroup]="signInForm" (ngSubmit)="onSubmit()">
-      <label>
-        Email:
-        <input type="text" formControlName="email" #email>
-      </label>
-
+      <label>Email:</label>
+      <input type="text" formControlName="email" #email>
+      <label>Password:</label>
+      <input type="text" formControlName="password" #email>
       <button type="submit">Submit</button>
     </form>
-
   </div>
+  <img src="./assets/images/wellness.png" alt="">
 </div>
