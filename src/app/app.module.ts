@@ -20,6 +20,7 @@ import { ResultsComponent } from './results/results.component';
 import { ConfirmationComponent } from './confirmation/confirmation.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { SigninComponent } from './signin/signin.component';
+import { HeaderComponent } from './header/header.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { SigninComponent } from './signin/signin.component';
     ResultsComponent,
     ConfirmationComponent,
     RegistrationComponent,
-    SigninComponent
+    SigninComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
