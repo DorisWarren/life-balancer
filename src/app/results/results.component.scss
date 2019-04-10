@@ -1,6 +1,7 @@
-body {
-  text-align: center;
+h1 {
+  margin-left: 40%;
 }
+
 
 
 img {
@@ -8,18 +9,23 @@ img {
 }
 
 .circle-container {
-  width: 50%;
+  width: 30%;
   display: grid;
   grid-template-columns: 45% 45% ;
- grid-template-rows: 25% 25% ;
- margin-left: 25%;
+ grid-template-rows: 350px 25% 35%; ;
+ margin-left: 35%;
 
   .circle {
     text-align: center;
     display: flex;
-    border: 1px solid red;
+    border: 1px solid red
   }
 
+  .circle:hover {
+    width:40%;
+    z-index: 0;
+
+  }
   .good-circle {
     background-color: green;
     width: 30em;
