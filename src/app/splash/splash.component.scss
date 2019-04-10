@@ -22,10 +22,10 @@ img:hover {
   animation-name: icons;
 }
 
-h1 {
-  animation-name: example;
-  animation-duration: 4s;
-}
+// h1 {
+//   animation-name: example;
+//   animation-duration: 4s;
+// }
 
 .welcome {
   display: flex;
@@ -38,8 +38,11 @@ h1 {
   color: white;
   letter-spacing: .2em;
   text-align: center;
-  font-size: 70%;
-  // border: 1px solid red;
+  h1 {
+    font-size: 70px;
+    animation-name: example;
+    animation-duration: 4s;
+  }
 }
 
 .account {
@@ -82,7 +85,7 @@ button {
 @keyframes example {
   0% {
    color: red;
-   font-size: 20px;
+   // font-size: 20px;
  }
  15% {
    color: #008181;
