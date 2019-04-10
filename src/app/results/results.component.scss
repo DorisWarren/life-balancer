@@ -1,0 +1,44 @@
+body {
+  text-align: center;
+}
+
+
+img {
+  width: 50%;
+}
+
+.circle-container {
+  width: 50%;
+  display: grid;
+  grid-template-columns: 45% 45% ;
+ grid-template-rows: 25% 25% ;
+ margin-left: 25%;
+
+  .circle {
+    text-align: center;
+    display: flex;
+    border: 1px solid red;
+  }
+
+  .good-circle {
+    background-color: green;
+    width: 30em;
+    height: 30em;
+    border-radius: 50%;
+  }
+  .ok-circle {
+    background-color: orange;
+    width: 20em;
+    height: 20em;
+    border-radius: 50%;
+  }
+  .bad-circle {
+    background-color: darkred;
+    width: 10em;
+    height: 10em;
+    border-radius: 50%;
+  }
+
+
+
+}
