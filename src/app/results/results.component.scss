@@ -9,10 +9,11 @@ img {
 }
 
 .circle-container {
-  width: 30%;
+  width: 35%;
   display: grid;
   grid-template-columns: 45% 45% ;
- grid-template-rows: 350px 25% 35%; ;
+ grid-template-rows: 350px 25% 35% ;
+ margin-top: 5%;
  margin-left: 35%;
 
   .circle {
@@ -21,11 +22,6 @@ img {
     border: 1px solid red
   }
 
-  .circle:hover {
-    width:40%;
-    z-index: 0;
-
-  }
   .good-circle {
     background-color: green;
     width: 30em;
@@ -45,6 +41,10 @@ img {
     border-radius: 50%;
   }
 
+  .circle:hover {
+    width:10%;
+    z-index: 0;
+  }
 
 
 }
