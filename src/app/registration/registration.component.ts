@@ -19,7 +19,9 @@ export class RegistrationComponent implements OnInit {
 
   resultsFromDatabase;
 
-  constructor(private userInfoService: UserInfoService, private routes: Router) { }
+  constructor(
+    private userInfoService: UserInfoService,
+    private routes: Router) { }
 
   ngOnInit() {
     this.getResults();
