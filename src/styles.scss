@@ -21,13 +21,57 @@ button {
   height: 40px;
   font-size: 16px;
   letter-spacing: .2em;
-  font-weight: 500;
+  font-weight: bold;
   border: none;
   text-transform: uppercase;
+  color: #00254e
 }
 
 button:hover {
-  background-color: green;
+  background-image: linear-gradient(to right, #179e00, #00ec19);
   cursor: pointer;
   color: white;
   }
+
+
+  @keyframes example {
+    0% {
+     color: #008181
+   }
+   15% {
+     color: #008181;
+   }
+   30% {
+     color: #009a9a;
+   }
+   45% {
+     color: #00b4b4;
+   }
+   60% {
+     color: #00cdcd;
+   }
+   75% {
+     color: #00e7e7;
+   }
+   90% {
+     color: #1bffff;
+   }
+   100% {
+     color: white;
+   }
+  }
+
+  @keyframes icons {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes bounce-1 {
+          0%   { transform: translateY(0); }
+          50%  { transform: translateY(20px); }
+          100% { transform: translateY(0); }
+      }
