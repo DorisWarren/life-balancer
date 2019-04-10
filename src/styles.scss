@@ -11,8 +11,6 @@ html, body {
   padding: 0;
 }
 
-
-
 button {
   border: 1px solid red;
   position: relative;
@@ -21,13 +19,82 @@ button {
   height: 40px;
   font-size: 16px;
   letter-spacing: .2em;
-  font-weight: 500;
+  font-weight: bold;
   border: none;
   text-transform: uppercase;
+  color: #00254e
 }
 
 button:hover {
-  background-color: green;
+  background-image: linear-gradient(to right, #179e00, #00ec19);
   cursor: pointer;
   color: white;
   }
+
+
+  .mat-slider.mat-slider-horizontal .mat-slider-wrapper {
+    top: 18px;
+  }
+  .mat-slider.mat-slider-horizontal .mat-slider-track-wrapper {
+    height: 12px;
+    border-radius: 10px
+  }
+  .mat-slider.mat-slider-horizontal .mat-slider-track-background,
+  .mat-slider.mat-slider-horizontal .mat-slider-track-fill {
+    height: 100%;
+  }
+  .mat-slider.mat-slider-horizontal .mat-slider-track-fill {
+    background-color: blue;
+  }
+  .mat-accent .mat-slider-thumb {
+    height: 50px;
+    width: 50px;
+    background-color: white;
+    border: solid 2px gray;
+    bottom: -30px;
+    right: -20px;
+  }
+  .mat-slider-min-value:not(.mat-slider-thumb-label-showing) .mat-slider-thumb {
+    background-color: white;
+  }
+
+  @keyframes bounce-1 {
+          0%   { transform: translateY(0); }
+          50%  { transform: translateY(20px); }
+          100% { transform: translateY(0); }
+      }
+      @keyframes example {
+        0% {
+         color: #008181
+       }
+       15% {
+         color: #008181;
+       }
+       30% {
+         color: #009a9a;
+       }
+       45% {
+         color: #00b4b4;
+       }
+       60% {
+         color: #00cdcd;
+       }
+       75% {
+         color: #00e7e7;
+       }
+       90% {
+         color: #1bffff;
+       }
+       100% {
+         color: white;
+       }
+      }
+
+      @keyframes icons {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }

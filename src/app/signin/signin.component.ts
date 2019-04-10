@@ -18,6 +18,7 @@ export class SigninComponent implements OnInit {
   });
 
   resultsFromDatabase;
+  userObject;
 
 
   constructor(private userInfoService: UserInfoService, private routes: Router) { }
@@ -36,20 +37,22 @@ getResults = () =>
     console.log(emailInput);
     // console.log(this.resultsFromDatabase);
 
-    this.resultsFromDatabase.forEach(function(entry) {
-      console.log(entry.payload.doc.data().email);
-      if (emailInput.email === entry.payload.doc.data().email) {
-        routes.navigate(['results']);
-        // console.log('if you got this far, you should get results');
+    //this will capture the database object matching the email and set it as a property on the service
+    for (let i=0; i<this.resultsFromDatabase.length; i++) {
+      if(emailInput.email === this.resultsFromDatabase[i].payload.doc.data().email) {
+        this.userObject =  this.resultsFromDatabase[i].payload.doc.data();
+        this.userInfoService.userObjectId = this.resultsFromDatabase[i].payload.doc.id;
       }
-      else {
-        routes.navigate(['register']);
-        // console.log('if you see this, you should go to registration');
-      }
+    }
+    this.userInfoService.userObject = this.userObject;
+    //this will route to different pages depending on if the email exists in the database or not
+    if (this.userObject) {
+      this.routes.navigate(['results']);
 
-
-    });
-
+    } else {
+      this.routes.navigate(['register']);
+    }
   }
+
 
 }
