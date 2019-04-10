@@ -22,11 +22,6 @@ img:hover {
   animation-name: icons;
 }
 
-h1 {
-  animation-name: example;
-  animation-duration: 4s;
-}
-
 .welcome {
   display: flex;
   flex-direction: column;
@@ -37,8 +32,14 @@ h1 {
   margin-top:15%;
   color: white;
   letter-spacing: .2em;
-  font-size: 50px;
   text-align: center;
+  h1 {
+    font-size: 100px;
+    font-weight: 400;
+    animation-name: example;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+  }
 }
 
 .account {
@@ -53,6 +54,7 @@ h1 {
   letter-spacing: .2em;
   font-size: 14px;
   text-align: center;
+  color: #00254e
 }
 
 .social {
@@ -80,26 +82,25 @@ button {
 
 @keyframes example {
   0% {
-   color: red;
-   font-size: 20px;
+   color: #008181
  }
  15% {
-   color: orange;
+   color: #008181;
  }
  30% {
-   color: yellow;
+   color: #009a9a;
  }
  45% {
-   color: green;
+   color: #00b4b4;
  }
  60% {
-   color: blue;
+   color: #00cdcd;
  }
  75% {
-   color: indigo;
+   color: #00e7e7;
  }
  90% {
-   color: violet;
+   color: #1bffff;
  }
  100% {
    color: white;
