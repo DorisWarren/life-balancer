@@ -2,17 +2,20 @@
   display: flex;
   flex-direction: column;
   align-content: center;
-  text-transform: uppercase;
+  // text-transform: uppercase;
   background-color: #66b2b2;
-  letter-spacing: .2em;
-  font-size: 30px;
-  text-align: center;
+  // letter-spacing: .2em;
+  // font-size: 30px;
+  // text-align: center;
 }
 h4{
   font-weight: lighter;
   padding-bottom: 45px;
 }
 .social {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
   ul{
     list-style-type: none;
     li{

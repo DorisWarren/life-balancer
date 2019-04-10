@@ -86,11 +86,9 @@ _NOT_ someone else’s entries.
 1. ~~Solidify MVP~~ _DONE_
 1. ~~Set up Github repository~~ _DONE_
 1. ~~Build component tree~~ _DONE_
-1. Research technologies we don’t already know, e.g. Angular Material, Auth/Auth
-1. Collect content
-1. Design app layout - mobile
-1. Test wireframes with fellow students
-1. Revise design
+1. ~~Research technologies we don’t already know, e.g. Angular Material, Auth/Auth~~ _DONE_
+1. ~~Collect content~~ _DONE_
+1. ~~Design app layout~~ _DONE_
 1. Create database
 1. Build components
 1. Connect to database

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ConfirmationComponent } from '../confirmation/confirmation.component';
 import {categoriesDetail} from '../models/categories-detail.model'
+import {category} from '../models/category.model'
 
 @Component({
   selector: 'app-category-detail',
@@ -10,13 +11,13 @@ import {categoriesDetail} from '../models/categories-detail.model'
 })
 export class CategoryDetailComponent   {
   categories: categoriesDetail[] = [
-  new categoriesDetail("Social", "Below are three questions to help self assess your social life ",
+  new categoriesDetail(new category("Social", "Below are three questions to help self assess your social life ", './assets/images/social.png'),
       "How often do you get together with friends outside of work?","Do you talk with or visit family members, other than during the holidays?","Do you feel safe and respected in your primary intimate relationship?", 1),
-  new categoriesDetail("Work", "Self assessing your work enviroment.",
+  new categoriesDetail(new category("Work", "Below are three questions to help self assess your social life ", './assets/images/work.png'),
       "How much autonomy do you have in performing your job?","Do you feel challenged in your job?","Do you feel supported by your managment? ", 2),
-  new categoriesDetail("Financial", "Self assessing your finances.",
-      "Have you set and achieved your financial goals?","Do you have any debt you need to pay off?","Have you satrted saving?", 3),
-  new categoriesDetail("Wellness", "Self assessing Health, Fitness, Mindfulness!",
+  new categoriesDetail(new category('Financial', "Below are three questions to help self assess your social life ", './assets/images/financial.png'),
+      "Have you set and achieved your financial goals?","Do you have any debt you need to pay off?","Have you started saving?", 3),
+  new categoriesDetail(new category("Social", "Below are three questions to help self assess your social life ", './assets/images/wellness.png'),
       "Do you have a nutrition plan?","Do you have any daily work out goals or routines?","Have you created a way to deal with daily stress?", 4),
   ];
 }
