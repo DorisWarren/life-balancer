@@ -28,7 +28,7 @@ export class UserInfoService {
     return this.firestore
               .collection("users")
               .doc(this.userObjectId)
-              .set({wellness : value }, {merge: true});
+              .set({assessment : {wellness: value} }, {merge: true});
   }
 
   updateFinanceData(value) {

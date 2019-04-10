@@ -19,6 +19,7 @@ export class RegistrationComponent implements OnInit {
 
   resultsFromDatabase;
 
+
   constructor(private userInfoService: UserInfoService, private routes: Router) { }
 
   ngOnInit() {
@@ -26,25 +27,20 @@ export class RegistrationComponent implements OnInit {
   }
 
   onSubmit() {
-    //event emiiter or update database here
-    console.log(this.registrationForm.value);
     let data = this.registrationForm.value;
+
 
     this.userInfoService.createNewUser(data)
         .then(res => {
           this.registrationForm.reset();
 
         });
-
-    this.userInfoService.userObject = data;
-    this.routes.navigate(['categories']);
+      this.userInfoService.userObject  = data;
+    //need to set userObject after the resultsFromDatabase has been updated
+    this.routes.navigate(['results']);
   }
 
-// temporary button to experiment with getting user by name from database
-  showUsersInDatabase() {
-    // this.resultsFromDatabase = this.userInfoService.getUserByName();
-    console.log(this.resultsFromDatabase);
-  }
+
 
   getResults = () =>
     this.userInfoService.getUserByName().subscribe(res => (this.resultsFromDatabase = res));

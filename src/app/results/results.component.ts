@@ -25,14 +25,13 @@ export class ResultsComponent {
     if(this.userInfoService.userObject) {
       this.userObject = this.userInfoService.userObject;
       this.userObjectId = this.userInfoService.userObjectId;
-    } //results of database undefined on OnInit, need to find a way to set userobject properly from registration form
-    // console.log(this.userObject);
+    } 
 
   }
   formatData(childUserInfo) {
-    
-  }
 
+  }
+//clickMe used for testing
   clickMe() {
     console.log(this.userObject);
     //this will update specific user wellness database
@@ -43,6 +42,7 @@ export class ResultsComponent {
     this.userInfoService.updateFinanceData(2);
 
   }
+
   getResults = () =>
     this.userInfoService.getUserByName().subscribe(res => (this.resultsFromDatabase = res));
 
