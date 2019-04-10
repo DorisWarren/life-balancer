@@ -29,7 +29,10 @@ export class ResultsComponent implements OnInit {
     console.log(this.userObject);
     //this will update specific user wellness database
     //need to pass in variable below
-    this.userInfoService.updateWellnessData(5);
+    this.userInfoService.updateWellnessData(8);
+    this.userInfoService.updateSocialData(5);
+    this.userInfoService.updateWorkData(6);
+    this.userInfoService.updateFinanceData(2);
 
   }
   getResults = () =>

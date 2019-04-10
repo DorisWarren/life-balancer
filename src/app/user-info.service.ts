@@ -31,5 +31,26 @@ export class UserInfoService {
               .set({wellness : value }, {merge: true});
   }
 
+  updateFinanceData(value) {
+    return this.firestore
+              .collection("users")
+              .doc(this.userObjectId)
+              .set({finance : value }, {merge: true});
+  }
+
+  updateSocialData(value) {
+    return this.firestore
+              .collection("users")
+              .doc(this.userObjectId)
+              .set({social : value }, {merge: true});
+  }
+
+  updateWorkData(value) {
+    return this.firestore
+              .collection("users")
+              .doc(this.userObjectId)
+              .set({work : value }, {merge: true});
+  }
+
 
 }
