@@ -21,13 +21,14 @@ button {
   height: 40px;
   font-size: 16px;
   letter-spacing: .2em;
-  font-weight: 500;
+  font-weight: bold;
   border: none;
   text-transform: uppercase;
+  color: #00254e
 }
 
 button:hover {
-  background-color: green;
+  background-image: linear-gradient(to right, #179e00, #00ec19);
   cursor: pointer;
   color: white;
   }
@@ -68,3 +69,9 @@ button:hover {
       transform: rotate(360deg);
     }
   }
+
+  @keyframes bounce-1 {
+          0%   { transform: translateY(0); }
+          50%  { transform: translateY(20px); }
+          100% { transform: translateY(0); }
+      }

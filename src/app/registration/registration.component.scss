@@ -22,7 +22,10 @@
 }
 
 img {
-  position: absolute;
+   position: absolute;
+   // animation-name: bounce-1;
+   // animation-duration: 2s;
+   // animation-iteration-count: infinite;
    transform: rotate(20deg);
    left: -10%;
    bottom: 30%;
@@ -30,8 +33,11 @@ img {
    height: 30vw;
 }
 h1  {
+  font-size: 100px;
+  font-weight: 400;
+  animation-name: example;
+  animation-duration: 6s;
   text-align: center;
+  margin-top: 10%;
   color: white;
-  margin-top:50px;
- font-size: 50px;
 }
