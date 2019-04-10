@@ -2,15 +2,17 @@
 <a routerLink="/Confirmation">Register</a> -->
 <div class="category-detail">
   <div class="social">
-    <div *ngFor="let album of albums">
+    <div *ngFor="let category of categories">
       <h3><em>{{category.title}}</em></h3>
       <h4>{{category.description}}</h4>
       <ul>
-        <li *ngfor="let question of questions">{{category.question }}</li>
+        <li>{{category.question1}}</li>
+        <li>{{category.question2}}</li>
+        <li>{{category.question3}}</li>
       </ul>
       <mat-slider class="slider" min="1" max="5" step="0.5" value="1.5"></mat-slider>
-      <button class="submit" type="button" name="button">Submit</button>
     </div>
+    <button class="submit" type="button" name="button">Submit</button>
     <div class="social-img">
       <img src="./assets/images/social.png" alt="">
     </div>
