@@ -5,5 +5,4 @@ export const masterFireBaseConfi = {
     projectId: "life-balancer",
     storageBucket: "",
     messagingSenderId: "737972989030"
-
 };
