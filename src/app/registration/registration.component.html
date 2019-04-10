@@ -1,50 +1,49 @@
-<form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
-  <label>
-    First Name:
-    <input type="text" formControlName="firstName">
-  </label>
 
-  <label>
-    Last Name:
-  <input type="text" formControlName="lastName">
-  </label>
-
-  <label>
-    Email:
-  <input type="text" formControlName="email">
-  </label>
-
-  <label>
-    Satisfaction Level(1-10)
-  <input type="range" min="1" max="10" step="1" value="5" formControlName="satisfaction">
-  </label>
-
-  <button type="submit">Submit</button>
-
-</form>
-
-<p>
-  <button (click)="showUsersInDatabase()">ClickMe!</button>
-
-</p>
-
-
-  <label for="my-name">My Name</label>
-  <input id="my-name" #myName>
-  <button (click)="getUserInDatabase()">Get My Results</button>
-<p>
-
-<p>
-  <a routerLink="/categories">Cats</a>
-</p>
-<p>
-  <a routerLink="/signin">Sign In</a>
-</p>
-
-<div *ngFor="let entry of resultsFromDatabase">
-  <div *ngIf="myName.value === entry.payload.doc.data().firstName">
-    <p> Welcome back {{entry.payload.doc.data().firstName}} {{entry.payload.doc.data().lastName}}</p>
-
-
+<div class="container">
+  <!-- <img src="./assets/images/wellness.png" alt=""> -->
+  <h1>LIFE BALANCER</h1>
+  <div class="junbotrom">
+    <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+      <label>
+        First Name:
+      </label>
+      <input type="text" formControlName="firstName">
+      <label>
+        Last Name:
+      </label>
+      <input type="text" formControlName="lastName">
+      <label>
+        Email:
+      </label>
+      <input type="text" formControlName="email">
+      <button routerLink="/categories" type="submit">Register</button>
+    </form>
   </div>
+  <img src="./assets/images/financial.png" alt="">
 </div>
+
+<!-- <label>
+Satisfaction Level(1-10)
+<input type="range" min="1" max="10" step="1" value="5" formControlName="satisfaction">
+</label>
+
+<button (click)="showUsersInDatabase()">ClickMe!</button>
+
+<div class="junbotrom">
+
+<label for="my-name">My Name<input id="my-name" #myName></label>
+
+<button (click)="getUserInDatabase()">Get My Results</button>
+<p>
+<p>
+<a routerLink="/categories">Register</a>
+</p>
+<p>
+<a routerLink="/signin">Sign In</a>
+</p>
+<div *ngFor="let entry of resultsFromDatabase">
+<div *ngIf="myName.value === entry.payload.doc.data().firstName">
+<p> Welcome back {{entry.payload.doc.data().firstName}} {{entry.payload.doc.data().lastName}}</p>
+</div>
+</div>
+</div> -->
