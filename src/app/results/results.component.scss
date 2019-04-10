@@ -59,23 +59,24 @@ main {
   }
 
 
-.good-circle:hover {
-  width: 30em;
-}
-
 .circle:hover {
   z-index: 0;
   cursor: pointer;
   background-image: linear-gradient(#00cdcd, #008080);
+  animation-name: bounce-1;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
   img {
     display: none;
   }
   button {
     display: inline;
-    position: absolute;
-    z-index: 0;
   }
 }
-
-
 }
+
+@keyframes bounce-1 {
+        0%   { transform: translateY(0); }
+        50%  { transform: translateY(-50px); }
+        100% { transform: translateY(0); }
+    }
