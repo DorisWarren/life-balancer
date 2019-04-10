@@ -14,8 +14,9 @@
 }
 
 img {
-  animation-duration: 10s;
+  animation-duration: 5s;
   animation-iteration-count: infinite;
+  animation-name: iconsTwo;
 }
 
 img:hover {
@@ -38,7 +39,7 @@ img:hover {
     font-weight: 400;
     animation-name: example;
     animation-duration: 6s;
-    animation-iteration-count: infinite;
+    // animation-iteration-count: infinite;
   }
 }
 
@@ -66,14 +67,14 @@ img:hover {
 }
 
 .financial {
- transform: rotate(-20deg);
+ // transform: rotate(-20deg);
  margin-left: 70%;
  img {
    position: absolute;
  }
 }
 .work {
-  transform: rotate(20deg);
+  // transform: rotate(20deg);
 }
 
 button {
@@ -113,5 +114,23 @@ button {
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes iconsTwo {
+  0% {
+    transform: rotate(-45deg);
+  }
+  25% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(45deg);
+  }
+  75% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-45deg);
   }
 }
