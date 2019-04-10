@@ -3,7 +3,7 @@
   flex-direction: column;
   align-content: center;
   text-transform: uppercase;
-  background-color: #b2d8d8;
+  background-color: #66b2b2;
   letter-spacing: .2em;
   font-size: 30px;
   text-align: center;
@@ -21,8 +21,9 @@ h4{
   }
 }
 
-mat-slider{
 
+mat-slider {
+  width: 400px;
 }
 
 img {
