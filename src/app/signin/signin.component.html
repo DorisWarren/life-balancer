@@ -1,12 +1,15 @@
-<form [formGroup]="signInForm" (ngSubmit)="onSubmit()">
-  <label>
-    Email:
-    <input type="text" formControlName="email" #email>
-  </label>
 
-  <button type="submit">Submit</button>
-
-</form>
-
-
-<a routerLink="/results">Results</a>
+<div class="container">
+  <h1>LIFE BALANCER</h1>
+  <div class="junbotrom">
+    <p>Please enter your email and password:</p>
+    <form [formGroup]="signInForm" (ngSubmit)="onSubmit()">
+      <label>Email:</label>
+      <input type="text" formControlName="email" #email>
+      <label>Password:</label>
+      <input type="text" formControlName="password" #email>
+      <button type="submit">Sign In</button>
+    </form>
+  </div>
+  <img src="./assets/images/wellness.png" alt="">
+</div>

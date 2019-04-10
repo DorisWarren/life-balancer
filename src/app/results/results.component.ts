@@ -1,5 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { UserInfoService } from '../user-info.service';
+import { AppComponent } from '../app.component'
+import { Assessment } from '../models/assessment.model'
+import { User } from '../models/user.model'
+
 
 
 @Component({
@@ -7,7 +11,8 @@ import { UserInfoService } from '../user-info.service';
   templateUrl: './results.component.html',
   styleUrls: ['./results.component.scss']
 })
-export class ResultsComponent implements OnInit {
+export class ResultsComponent {
+  @Input() childUserInfo: User[];
 
   resultsFromDatabase;
   userObject;
@@ -24,6 +29,9 @@ export class ResultsComponent implements OnInit {
     // console.log(this.userObject);
 
   }
+  formatData(childUserInfo) {
+    
+  }
 
   clickMe() {
     console.log(this.userObject);
@@ -37,6 +45,7 @@ export class ResultsComponent implements OnInit {
   }
   getResults = () =>
     this.userInfoService.getUserByName().subscribe(res => (this.resultsFromDatabase = res));
+
 
 
 }

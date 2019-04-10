@@ -1,0 +1,60 @@
+h1 {
+  margin-left: 40%;
+}
+
+
+
+img {
+  width: 50%;
+}
+
+.circle-container {
+  width: 35%;
+  display: grid;
+  grid-template-columns: 45% 45% ;
+ grid-template-rows: 350px 25% 35% ;
+ margin-top: 5%;
+ margin-left: 35%;
+
+  .circle {
+    text-align: center;
+    display: flex;
+    border: 1px solid red
+  }
+
+  .good-circle {
+    background-color: green;
+    width: 30em;
+    height: 30em;
+    border-radius: 50%;
+  }
+  .ok-circle {
+    background-color: orange;
+    width: 20em;
+    height: 20em;
+    border-radius: 50%;
+  }
+  .bad-circle {
+    background-color: darkred;
+    width: 10em;
+    height: 10em;
+    border-radius: 50%;
+  }
+
+  .circle:hover {
+    z-index: 0;
+  }
+
+.good-circle:hover {
+  width: 35em;
+}
+
+
+
+
+
+
+
+
+
+}
