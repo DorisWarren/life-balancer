@@ -41,6 +41,7 @@ getResults = () =>
     for (let i=0; i<this.resultsFromDatabase.length; i++) {
       if(emailInput.email === this.resultsFromDatabase[i].payload.doc.data().email) {
         this.userObject =  this.resultsFromDatabase[i].payload.doc.data();
+        this.userInfoService.userObjectId = this.resultsFromDatabase[i].payload.doc.id;
       }
     }
     this.userInfoService.userObject = this.userObject;

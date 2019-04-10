@@ -26,13 +26,7 @@
 <p>
   <button (click)="showUsersInDatabase()">ClickMe!</button>
 
-</p>
 
-
-  <label for="my-name">My Name</label>
-  <input id="my-name" #myName>
-  <button (click)="getUserInDatabase()">Get My Results</button>
-<p>
 
 <p>
   <a routerLink="/categories">Cats</a>
@@ -45,9 +39,9 @@
 </p>
 
 <div *ngFor="let entry of resultsFromDatabase">
-  <div *ngIf="myName.value === entry.payload.doc.data().firstName">
-    <p> Welcome back {{entry.payload.doc.data().firstName}} {{entry.payload.doc.data().lastName}}</p>
+  <!-- can access ID here -->
+    <p> Welcome back {{entry.payload.doc.data().firstName}} {{entry.payload.doc.id}}</p>
 
 
-  </div>
+
 </div>

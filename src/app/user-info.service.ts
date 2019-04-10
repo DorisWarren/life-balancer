@@ -7,6 +7,7 @@ import { AngularFirestore } from '@angular/fire/firestore';
 export class UserInfoService {
 
   userObject;
+  userObjectId;
 
   constructor(private firestore: AngularFirestore) { }
 
@@ -21,6 +22,13 @@ export class UserInfoService {
 
   getUserByName() {
     return this.firestore.collection("users").snapshotChanges();
+  }
+
+  updateWellnessData(value) {
+    return this.firestore
+              .collection("users")
+              .doc(this.userObjectId)
+              .set({wellness : value }, {merge: true});
   }
 
 

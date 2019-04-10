@@ -35,6 +35,7 @@ export class RegistrationComponent implements OnInit {
           this.registrationForm.reset();
 
         });
+
     this.userInfoService.userObject = data;
     this.routes.navigate(['categories']);
   }
