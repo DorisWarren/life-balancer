@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import { UserInfoService } from '../user-info.service';
-import { Routes, RouterModule } from '@angular/router';
+import { Routes, RouterModule, Router } from '@angular/router';
 import { CategoriesComponent } from '../categories/categories.component';
 
 @Component({
@@ -19,7 +19,7 @@ export class RegistrationComponent implements OnInit {
 
   resultsFromDatabase;
 
-  constructor(private userInfoService: UserInfoService) { }
+  constructor(private userInfoService: UserInfoService, private routes: Router) { }
 
   ngOnInit() {
     this.getResults();
@@ -36,6 +36,7 @@ export class RegistrationComponent implements OnInit {
 
         });
     this.userInfoService.userObject = data;
+    this.routes.navigate(['categories']);
   }
 
 // temporary button to experiment with getting user by name from database
