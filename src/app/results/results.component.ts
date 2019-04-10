@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UserInfoService } from '../user-info.service';
 
 
 @Component({
@@ -8,9 +9,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ResultsComponent implements OnInit {
 
-  constructor() { }
+  resultsFromDatabase;
+  userObject;
+
+  constructor(private userInfoService: UserInfoService) { }
 
   ngOnInit() {
+    this.getResults();
+    if(this.userInfoService.userObject) {
+      this.userObject = this.userInfoService.userObject;
+    } //results of database undefined on OnInit, need to find a way to set userobject properly from registration form
+    // console.log(this.userObject);
+
   }
+
+  clickMe() {
+    console.log(this.userObject);
+  }
+  getResults = () =>
+    this.userInfoService.getUserByName().subscribe(res => (this.resultsFromDatabase = res));
+
 
 }

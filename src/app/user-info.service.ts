@@ -6,6 +6,8 @@ import { AngularFirestore } from '@angular/fire/firestore';
 })
 export class UserInfoService {
 
+  userObject;
+
   constructor(private firestore: AngularFirestore) { }
 
   createNewUser(data) {

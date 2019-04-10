@@ -40,6 +40,9 @@
 <p>
   <a routerLink="/signin">Sign In</a>
 </p>
+<p>
+  <a routerLink="/results">Results</a>
+</p>
 
 <div *ngFor="let entry of resultsFromDatabase">
   <div *ngIf="myName.value === entry.payload.doc.data().firstName">

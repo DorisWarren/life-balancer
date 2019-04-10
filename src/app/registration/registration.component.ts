@@ -35,7 +35,7 @@ export class RegistrationComponent implements OnInit {
           this.registrationForm.reset();
 
         });
-
+    this.userInfoService.userObject = data;
   }
 
 // temporary button to experiment with getting user by name from database
