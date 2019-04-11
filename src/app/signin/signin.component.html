@@ -1,13 +1,12 @@
 <app-header></app-header>
 <div class="container">
-  <!-- <h1>LIFE BALANCER</h1> -->
   <div class="junbotrom">
     <p>Please enter your email and password:</p>
     <form [formGroup]="signInForm" (ngSubmit)="onSubmit()">
       <label>Email:</label>
       <input type="text" formControlName="email" #email>
-      <!-- <label>Password:</label>
-      <input type="text" formControlName="password" #email> -->
+      <label>Password:</label>
+      <input type="password" formControlName="password" #password>
       <button type="submit">Sign In</button>
     </form>
   </div>
