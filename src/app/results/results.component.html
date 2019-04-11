@@ -17,19 +17,19 @@
 <div class="main">
   <!-- <h1> LIFE BALANCER</h1> -->
   <div class="circle-container ">
-    <div class="circle good-circle">
+    <div [class]="formatDataWork()">
       <button type="button" name="button">see more</button>
       <img src="../../assets/images/work.png" alt="icon">
     </div>
-    <div class="circle ok-circle">
+    <div [class]="formatDataFin()" class="circle">
       <img src="../../assets/images/financial.png" alt=" icon">
       <button type="button" name="button">see more</button>
     </div>
-    <div class="circle ok-circle">
+    <div [class]="formatDataWell()">
       <img src="../../assets/images/wellness.png" alt="icon">
       <button type="button" name="button">see more</button>
     </div>
-    <div class="circle bad-circle">
+    <div [class]="formatDataSoc()">
       <img src="../../assets/images/social.png" alt="icon">
       <button type="button" name="button">see more</button>
     </div>
