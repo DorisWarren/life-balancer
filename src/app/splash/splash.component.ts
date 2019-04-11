@@ -4,9 +4,6 @@ import { SigninComponent } from '../signin/signin.component';
 import { RegistrationComponent} from '../registration/registration.component';
 
 
-
-
-
 @Component({
   selector: 'app-splash',
   templateUrl: './splash.component.html',
