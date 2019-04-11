@@ -1,22 +1,44 @@
-
+<!-- <h1> S A M P L E | T E X T</h1>
+<div class="circle-container ">
+  <div class="circle good-circle">
+    <img src="../../assets/images/work.png" alt="icon">
+  </div>
+  <div [class]="formatData()" class="">
+    <img src="../../assets/images/financial.png" alt=" icon">
+  </div>
+  <div class="circle ok-circle">
+    <img src="../../assets/images/wellness.png" alt="icon">
+  </div>
+  <div class="circle bad-circle">
+    <img src="../../assets/images/social.png" alt="icon">
+  </div>
+</div> -->
 <app-header></app-header>
 <div class="main">
-  <h1>Results for {{userObject.firstName | titlecase}}</h1>
+  <!-- <h1> LIFE BALANCER</h1> -->
   <div class="circle-container ">
     <div [class]="formatDataWork()">
-      <button type="button" name="button">see more</button>
+      <!-- <button type="button" name="button">see more</button> -->
       <img src="../../assets/images/work.png" alt="icon">
+      <!-- <h2>Work</h2> -->
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
     </div>
-    <div [class]="formatDataFin()" class="circle">
+    <div [class]="formatDataFin()">
       <img src="../../assets/images/financial.png" alt=" icon">
-      <button type="button" name="button">see more</button>
+      <!-- <h2>Financial</h2> -->
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+      <!-- <button type="button" name="button">see more</button> -->
     </div>
     <div [class]="formatDataWell()">
       <img src="../../assets/images/wellness.png" alt="icon">
-      <button type="button" name="button">see more</button>
+      <!-- <h2>Wellness</h2> -->
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+      <!-- <button type="button" name="button">see more</button> -->
     </div>
     <div [class]="formatDataSoc()">
       <img src="../../assets/images/social.png" alt="icon">
-      <button type="button" name="button">see more</button>
+      <!-- <h2>Social</h2> -->
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+      <!-- <button type="button" name="button">see more</button> -->
     </div>
   </div>
