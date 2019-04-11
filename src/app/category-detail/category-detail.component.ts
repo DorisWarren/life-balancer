@@ -16,14 +16,15 @@ export class CategoryDetailComponent   {
 
 
   categories: categoriesDetail[] = [
-  new categoriesDetail(new category("Social", "Below are three questions to help self assess", './assets/images/social.png'),
-      "How often do you get together with friends outside of work?","Do you talk with or visit family members, other than during the holidays?","Do you feel safe and respected in your primary intimate relationship?", 1),
+
   new categoriesDetail(new category("Work", "Below are three questions to help self assess", './assets/images/work.png'),
       "How much autonomy do you have in performing your job?","Do you feel challenged in your job?","Do you feel supported by your managment? ", 2),
   new categoriesDetail(new category('Financial', "Below are three questions to help self assess", './assets/images/financial.png'),
       "Have you set and achieved your financial goals?","Do you have any debt you need to pay off?","Have you started saving?", 3),
   new categoriesDetail(new category("Wellness", "Below are three questions to help self assess ", './assets/images/wellness.png'),
       "Do you have a nutrition plan?","Do you have any daily work out goals or routines?","Have you created a way to deal with daily stress?", 4),
+    new categoriesDetail(new category("Social", "Below are three questions to help self assess", './assets/images/social.png'),
+        "How often do you get together with friends outside of work?","Do you talk with or visit family members, other than during the holidays?","Do you feel safe and respected in your primary intimate relationship?", 1)
   ];
 
 
