@@ -34,28 +34,33 @@ export class ResultsComponent implements OnInit {
     if(this.userInfoService.userObject) {
       this.userObject = this.userInfoService.userObject;
       this.userObjectId = this.userInfoService.userObjectId;
+      console.log(this.userObject);
+      console.log(this.userObjectId);
     } //results of database undefined on OnInit, need to find a way to set userobject properly from registration form
     // console.log(this.userObject);
 
 
 
-  // clickMe() {
-  //   console.log(this.userObject);
-  //   //this will update specific user wellness database
-  //   //need to pass in variable below
-  //   this.userInfoService.updateWellnessData(8);
-  //   this.userInfoService.updateSocialData(5);
-  //   this.userInfoService.updateWorkData(6);
-  //   this.userInfoService.updateFinanceData(2);
-  //
-  //   console.log(this.childUserInfo)
-  //   // let length = this.childUserInfo[0].assessment.length - 1
-  //   // console.log(this.childUserInfo[0].assessment[length].social)
-  // }
 
 }
 
-  formatDataFin() {
+clickMe() {
+  console.log(this.userObject);
+  //this will update specific user wellness database
+  //need to pass in variable below
+  this.userInfoService.updateWellnessData(8);
+  this.userInfoService.updateSocialData(5);
+  this.userInfoService.updateWorkData(6);
+  this.userInfoService.updateFinanceData(2);
+
+  console.log(this.childUserInfo)
+  // let length = this.childUserInfo[0].assessment.length - 1
+  // console.log(this.childUserInfo[0].assessment[length].social)
+}
+
+  
+    // console.log(this.childUserInfo[0].assessment.length - 1)
+formatDataFin() {
     let length = this.childUserInfo[0].assessment.length - 1
     for (let i = 0; i < this.childUserInfo.length; i ++ )
     if (this.childUserInfo[i].assessment[length].finance >= 8 ) {

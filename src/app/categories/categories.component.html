@@ -1,7 +1,7 @@
 <app-header></app-header>
 <div class="container">
 
-  <h1>Welcome {{userObject.firstName}}</h1>
+  <h1>Welcome {{userObject.firstName}}{{userObjectId}}</h1>
 
     <div class="category" *ngFor="let category of categories">
         <h2>{{category.name}}</h2>
@@ -11,7 +11,7 @@
             <img id="financial" src="./assets/images/{{category.img}}" alt="">
         <br>
 
-        <button type="button" name="button" routerLink="/category-detail">SEE more</button>
+        <button type="button" name="button" routerLink="/results">SEE more</button>
      </div>
      <a routerLink="/category-detail">details</a>
 </div>
