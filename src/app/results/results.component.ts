@@ -53,12 +53,9 @@ export class ResultsComponent implements OnInit {
   //   // console.log(this.childUserInfo[0].assessment[length].social)
   // }
 
-
 }
 
-
-  formatData() {
-    // console.log(this.childUserInfo[0].assessment.length - 1)
+  formatDataFin() {
     let length = this.childUserInfo[0].assessment.length - 1
     for (let i = 0; i < this.childUserInfo.length; i ++ )
     if (this.childUserInfo[i].assessment[length].finance >= 8 ) {
@@ -72,6 +69,58 @@ export class ResultsComponent implements OnInit {
       return "bad-circle"
     }
 }
+formatDataSoc() {
+  let length = this.childUserInfo[0].assessment.length - 1
+  for (let i = 0; i < this.childUserInfo.length; i ++ )
+  if (this.childUserInfo[i].assessment[length].social >= 8 ) {
+    console.log('good')
+    return "good-circle"
+  } else if (this.childUserInfo[i].assessment[length].social >= 4 ) {
+    console.log('ok')
+    return "ok-circle"
+  } else {
+    console.log('bad')
+    return "bad-circle"
+  }
+}
+
+formatDataWell() {
+  let length = this.childUserInfo[0].assessment.length - 1
+  for (let i = 0; i < this.childUserInfo.length; i ++ )
+  if (this.childUserInfo[i].assessment[length].wellness >= 8 ) {
+    console.log('good')
+    return "good-circle"
+  } else if (this.childUserInfo[i].assessment[length].wellness >= 4 ) {
+    console.log('ok')
+    return "ok-circle"
+  } else {
+    console.log('bad')
+    return "bad-circle"
+  }
+}
+formatDataWork() {
+  let length = this.childUserInfo[0].assessment.length - 1
+  for (let i = 0; i < this.childUserInfo.length; i ++ )
+  if (this.childUserInfo[i].assessment[length].work >= 8 ) {
+    console.log('good')
+    return "good-circle"
+  } else if (this.childUserInfo[i].assessment[length].work >= 4 ) {
+    console.log('ok')
+    return "ok-circle"
+  } else {
+    console.log('bad')
+    return "bad-circle"
+  }
+}
+
+
+
+
+
+
+
+
+
 
 
 
