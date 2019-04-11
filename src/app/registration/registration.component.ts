@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import { UserInfoService } from '../user-info.service';
-import { Routes, RouterModule } from '@angular/router';
+import { Routes, RouterModule, Router } from '@angular/router';
 import { CategoriesComponent } from '../categories/categories.component';
 
 @Component({
@@ -14,20 +14,26 @@ export class RegistrationComponent implements OnInit {
     firstName: new FormControl(''),
     lastName: new FormControl(''),
     email: new FormControl(''),
-    satisfaction: new FormControl('5'),
   });
 
   resultsFromDatabase;
+  userObject;
 
-  constructor(private userInfoService: UserInfoService) { }
+  constructor(
+    private userInfoService: UserInfoService,
+    private routes: Router) { }
 
   ngOnInit() {
     this.getResults();
   }
 
+
+
+
+
   onSubmit() {
-    //event emiiter or update database here
-    console.log(this.registrationForm.value);
+
+
     let data = this.registrationForm.value;
 
     this.userInfoService.createNewUser(data)
@@ -35,7 +41,10 @@ export class RegistrationComponent implements OnInit {
           this.registrationForm.reset();
 
         });
+        //userObject doesnt contain firebase metadeta as its created and set locally here
+    this.userInfoService.userObject = data;
 
+    this.routes.navigate(['categories']);
   }
 
 // temporary button to experiment with getting user by name from database
@@ -46,6 +55,7 @@ export class RegistrationComponent implements OnInit {
 
   getResults = () =>
     this.userInfoService.getUserByName().subscribe(res => (this.resultsFromDatabase = res));
+
 
     getUserInDatabase() {
       console.log('placeholder');

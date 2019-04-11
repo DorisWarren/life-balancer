@@ -1,7 +1,7 @@
-
+<app-header></app-header>
 <div class="container">
   <!-- <img src="./assets/images/wellness.png" alt=""> -->
-  <h1>LIFE BALANCER</h1>
+  <!-- <h1>LIFE BALANCER</h1> -->
   <div class="junbotrom">
     <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
       <label>
@@ -16,7 +16,7 @@
         Email:
       </label>
       <input type="text" formControlName="email">
-      <button routerLink="/categories" type="submit">Register</button>
+      <button type="submit">Register</button>
     </form>
   </div>
   <img src="./assets/images/financial.png" alt="">
