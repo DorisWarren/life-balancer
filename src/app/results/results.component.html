@@ -1,22 +1,65 @@
-
+<!-- <h1> S A M P L E | T E X T</h1>
+<div class="circle-container ">
+  <div class="circle good-circle">
+    <img src="../../assets/images/work.png" alt="icon">
+  </div>
+  <div [class]="formatData()" class="">
+    <img src="../../assets/images/financial.png" alt=" icon">
+  </div>
+  <div class="circle ok-circle">
+    <img src="../../assets/images/wellness.png" alt="icon">
+  </div>
+  <div class="circle bad-circle">
+    <img src="../../assets/images/social.png" alt="icon">
+  </div>
+</div> -->
 <app-header></app-header>
 <div class="main">
+  <!-- <h1> LIFE BALANCER</h1> -->
   <div class="circle-container ">
     <div [class]="formatDataWork()">
-      <button type="button" name="button">see more</button>
+      <!-- <button type="button" name="button">see more</button> -->
       <img src="../../assets/images/work.png" alt="icon">
+      <!-- <h2>Work</h2> -->
+      <p>LOW: Based on you're input you are not happy with the work environment you are in.
+        Here are some steps you can take to make some improvments.
+        Ask your manager for actionable feedback.
+        When your priorities are unclear, ask your manager or team lead to clearify.
+        Clear your digital and physical workspace of clutter- focus on the task at hand.
+        AVOID office gossips (they can poison your mind and reputation)!
+        Find a mentor.</p>
     </div>
-    <div [class]="formatDataFin()" class="circle">
+    <div [class]="formatDataFin()">
       <img src="../../assets/images/financial.png" alt=" icon">
-      <button type="button" name="button">see more</button>
+      <!-- <h2>Financial</h2> -->
+        <p> MODERATE: Great! It looks like you are on the right track. Check in with youself. Questions to consider:
+          1. Are you satisfied with how you are spending your money?
+          2. Where has you're money gone this past week?
+          3. How do you need to adjust you're spending, so you can meet you're goals?
+          TIP: Set budgets and target amounts for everday spending.
+          EX: Bills, Groceries, Entertainment, Ect
+        </p>
+      <!-- <button type="button" name="button">see more</button> -->
     </div>
     <div [class]="formatDataWell()">
       <img src="../../assets/images/wellness.png" alt="icon">
-      <button type="button" name="button">see more</button>
+      <!-- <h2>Wellness</h2> -->
+        <p>HEALTH
+           LOW: Start creating new eating habits!
+            There is no specific answer as to what is the "best " diet for you. Everybody's body is so different. It is your job to see what works best for you! Here are some questions to consider when taking a new approach on a healthier version of you!
+            1. Set a goal for yourself
+            2.Focus on where you want to improve? 3. Understand the reasons behind your goal.
+            TIPS: In what ways does this goal align with my personal values? How does this goal get me closer to my version for my future? What excites me about the goal?</p>
+      <!-- <button type="button" name="button">see more</button> -->
     </div>
     <div [class]="formatDataSoc()">
       <img src="../../assets/images/social.png" alt="icon">
-      <button type="button" name="button">see more</button>
+      <!-- <h2>Social</h2> -->
+        <p>MODERATE: Suggestions on how you may be able to improve you're social life.
+           Schedule coffee, tea, or lunch dates with friends or people you have reached out to.
+           Go on a "date with you're partner - get a sitter for the children or pets.
+           Reach out to someone you've had a falling out with. Apologixe for wrongs. Fix Problems!
+           Call or visit you're parents and or older relatives on a regular schedule.</p>
+      <!-- <button type="button" name="button">see more</button> -->
     </div>
   </div>
-<!-- <button (click)="clickMe()">ClickMe</button> -->
