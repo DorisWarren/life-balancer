@@ -44,7 +44,7 @@ export class RegistrationComponent implements OnInit {
         //userObject doesnt contain firebase metadeta as its created and set locally here
     this.userInfoService.userObject = data;
 
-    this.routes.navigate(['categories']);
+    this.routes.navigate(['category-detail']);
   }
 
 // temporary button to experiment with getting user by name from database

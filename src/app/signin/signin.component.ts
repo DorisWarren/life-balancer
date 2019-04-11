@@ -15,6 +15,7 @@ import { CategoriesComponent } from '../categories/categories.component';
 export class SigninComponent implements OnInit {
   signInForm = new FormGroup ({
     email: new FormControl(''),
+    password: new FormControl(''),
   });
 
   resultsFromDatabase;
@@ -31,11 +32,9 @@ getResults = () =>
   this.userInfoService.getUserByName().subscribe(res => (this.resultsFromDatabase = res));
 
   onSubmit() {
-    let routes = this.routes;
-    //event emitter or update database here
+    // let routes = this.routes;
     let emailInput = this.signInForm.value;
     console.log(emailInput);
-    // console.log(this.resultsFromDatabase);
 
     //this will capture the database object matching the email and set it as a property on the service
     for (let i=0; i<this.resultsFromDatabase.length; i++) {
@@ -45,9 +44,10 @@ getResults = () =>
       }
     }
     this.userInfoService.userObject = this.userObject;
+    
     //this will route to different pages depending on if the email exists in the database or not
     if (this.userObject) {
-      this.routes.navigate(['categories']);
+      this.routes.navigate(['results']);
 
     } else {
       this.routes.navigate(['register']);
