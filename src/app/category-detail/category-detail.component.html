@@ -3,16 +3,108 @@
   <h1>How's It Going?</h1>
   <p>Rate how you feel your life is going in the categories below by moving each slider. Use the questions in each category as thought-starters.</p>
   <div class="input-layout">
-    <div *ngFor="let category of categories" class="input-content">
-      <img src="{{category.category.img}}">
-      <h3><em>{{category.category.name}}</em></h3>
+    <div class="input-content">
+      <img src="./assets/images/work.png">
+      <h3><em>Work</em></h3>
       <!-- <p>{{category.category.description}}</p> -->
       <ul>
-        <li>{{category.question1}}</li>
-        <li>{{category.question2}}</li>
-        <li>{{category.question3}}</li>
+        <li>How much autonomy do you have in performing your job?</li>
+        <li>Do you feel challenged in your job?"</li>
+        <li>Do you feel supported by your managment?</li>
       </ul>
-      <mat-slider thumbLabel tickInterval="1"class="slider" min="0" max="10" step="1" value="1" #value></mat-slider>
+      <input type="range" name="points" min="0" max="10"
+      step="1" class="slider" value="0" #workvalue>
+      <div class="slider-numbers">
+        <div>0</div>
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+      </div>
+    </div>
+
+    <div class="input-content">
+      <img src="./assets/images/financial.png">
+      <h3><em>Finance</em></h3>
+      <!-- <p>{{category.category.description}}</p> -->
+      <ul>
+        <li>Have you set and achieved your financial goals?</li>
+        <li>Do you have any debt you need to pay off?</li>
+        <li>Have you started saving?</li>
+      </ul>
+      <input type="range" name="points" min="0" max="10"
+      step="1" class="slider" value="0" #financevalue>
+      <div class="slider-numbers">
+        <div>0</div>
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+      </div>
+    </div>
+
+    <div class="input-content">
+      <img src="./assets/images/wellness.png">
+      <h3><em>Wellness</em></h3>
+      <!-- <p>{{category.category.description}}</p> -->
+      <ul>
+        <li>Do you have a nutrition plan?</li>
+        <li>Do you have any daily work out goals or routines?</li>
+        <li>Have you created a way to deal with daily stress?</li>
+      </ul>
+      <input type="range" name="points" min="0" max="10"
+      step="1" class="slider" value="0" #wellnessvalue>
+      <div class="slider-numbers">
+        <div>0</div>
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+      </div>
+    </div>
+
+    <div class="input-content">
+      <img src="./assets/images/social.png">
+      <h3><em>Social</em></h3>
+      <!-- <p>{{category.category.description}}</p> -->
+      <ul>
+        <li>How often do you get together with friends outside of work?</li>
+        <li>Do you talk with or visit family members, other than during the holidays?</li>
+        <li>Do you feel safe and respected in your primary intimate relationship?</li>
+      </ul>
+      <input type="range" name="points" min="0" max="10"
+      step="1" class="slider" value="0" #socialvalue>
+      <div class="slider-numbers">
+        <div>0</div>
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+      </div>
     </div>
   </div>
   <div class="button-row">
