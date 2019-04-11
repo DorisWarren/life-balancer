@@ -14,10 +14,10 @@ export class RegistrationComponent implements OnInit {
     firstName: new FormControl(''),
     lastName: new FormControl(''),
     email: new FormControl(''),
-    satisfaction: new FormControl('5'),
   });
 
   resultsFromDatabase;
+  userObject;
 
   constructor(
     private userInfoService: UserInfoService,
@@ -27,9 +27,13 @@ export class RegistrationComponent implements OnInit {
     this.getResults();
   }
 
+
+
+
+
   onSubmit() {
-    //event emiiter or update database here
-    console.log(this.registrationForm.value);
+
+
     let data = this.registrationForm.value;
 
     this.userInfoService.createNewUser(data)
@@ -37,8 +41,9 @@ export class RegistrationComponent implements OnInit {
           this.registrationForm.reset();
 
         });
-
+        //userObject doesnt contain firebase metadeta as its created and set locally here
     this.userInfoService.userObject = data;
+
     this.routes.navigate(['categories']);
   }
 
@@ -50,6 +55,7 @@ export class RegistrationComponent implements OnInit {
 
   getResults = () =>
     this.userInfoService.getUserByName().subscribe(res => (this.resultsFromDatabase = res));
+
 
     getUserInDatabase() {
       console.log('placeholder');

@@ -47,7 +47,7 @@ getResults = () =>
     this.userInfoService.userObject = this.userObject;
     //this will route to different pages depending on if the email exists in the database or not
     if (this.userObject) {
-      this.routes.navigate(['results']);
+      this.routes.navigate(['categories']);
 
     } else {
       this.routes.navigate(['register']);
