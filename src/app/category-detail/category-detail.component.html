@@ -12,10 +12,10 @@
         <li>{{category.question2}}</li>
         <li>{{category.question3}}</li>
       </ul>
-      <mat-slider thumbLabel tickInterval="1"class="slider" min="0" max="10" step="1" value="1"></mat-slider>
+      <mat-slider thumbLabel tickInterval="1"class="slider" min="0" max="10" step="1" value="1" #value></mat-slider>
     </div>
   </div>
   <div class="button-row">
-    <button class="submit" type="submit" name="button" routerLink="/results">Submit</button>
+    <button routerLink="/results" class="submit" type="submit" name="button">Submit</button>
   </div>
 </div>

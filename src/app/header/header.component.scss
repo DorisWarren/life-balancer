@@ -1,19 +1,27 @@
 .header {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: flex-start;
-  height: 60px;
-  margin: 10px 0 0 10px;
-  img {
-    width: auto;
-    height: 100%;
-    margin: 0;
-  }
-  h1 {
-    color: #ffffff;
-    font-size: 2rem;
-    margin: 0;
-    align-content: center;
-    padding: 10px;
+  // border: 1px solid #f0f;
+  a {
+    // border: 1px solid #f00;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    height: 60px;
+    margin: 10px 0 0 10px;
+    text-decoration: none;
+    cursor: pointer;
+    img {
+      // border: 1px solid #00f;
+      width: auto;
+      height: 100%;
+      margin: 0;
+    }
+    h1 {
+      // border: 1px solid #0ff;
+      color: #ffffff;
+      font-size: 2rem;
+      margin: 0;
+      align-content: center;
+      padding: 10px;
+    }
   }
 }
