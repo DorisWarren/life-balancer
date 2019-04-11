@@ -31,13 +31,12 @@ export class CategoriesComponent{
 
       if(this.userInfoService.userObject) {
         this.userObject = this.userInfoService.userObject;
-        // this.userObjectId = this.userInfoService.userObjectId;
-      } //results of database undefined on OnInit, need to find a way to set userobject properly from registration form
+      }
 
   }
 
     ngDoCheck() {
-        this.userObject = this.userInfoService.userObject;
+      this.userObject = this.userInfoService.userObject;
 
       for (let i=0; i<this.resultsFromDatabase.length; i++) {
         if(this.userObject.email === this.resultsFromDatabase[i].payload.doc.data().email) {
@@ -49,9 +48,6 @@ export class CategoriesComponent{
       this.userInfoService.userObjectId = this.userObjectId;
 
     }
-
-
-
 
 
   getResults = () =>
