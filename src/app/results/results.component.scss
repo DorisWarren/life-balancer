@@ -1,19 +1,19 @@
-// @mixin hoverState {
-//   hover {
-//     z-index: 0;
-//     cursor: pointer;
-//     background-image: linear-gradient(#00cdcd, #008080);
-//     animation-name: bounce-1;
-//     animation-duration: 2s;
-//     animation-iteration-count: infinite;
-//     img {
-//       display: none;
-//     }
-//     button {
-//       display: inline;
-//     }
-//   }
-// }
+@mixin hoverState {
+  &:hover {
+    z-index: 0;
+    cursor: pointer;
+    background-image: linear-gradient(#00cdcd, #008080);
+    animation-name: bounce-1;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    img {
+      display: none;
+    }
+    button {
+      display: inline;
+    }
+  }
+}
 h1 {
   font-size: 100px;
   font-weight: 400;
@@ -24,7 +24,6 @@ h1 {
   color: white;
   // animation-iteration-count: infinite;
 }
-
 
 img {
   width: 50%;
@@ -51,6 +50,7 @@ main {
   }
 
   .good-circle {
+    @include hoverState;
     display: flex;
     flex-direction: column;
     background-image: linear-gradient(#00cc00, #006600);
@@ -60,59 +60,18 @@ main {
     // border: 1px red solid;
   }
   .ok-circle {
+    @include hoverState;
     background-image: linear-gradient(#ff5a00, 	#ffa700);
     width: 20em;
     height: 20em;
     border-radius: 50%;
   }
   .bad-circle {
+    @include hoverState;
     background-image: linear-gradient(#bd0404, #fb2d2d);
     width: 10em;
     height: 10em;
     border-radius: 50%;
-  }
-
-  .bad-circle:hover {
-    z-index: 0;
-    cursor: pointer;
-    background-image: linear-gradient(#00cdcd, #008080);
-    animation-name: bounce-1;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-    img {
-      display: none;
-    }
-    button {
-      display: inline;
-    }
-  }
-  .good-circle:hover {
-    z-index: 0;
-    cursor: pointer;
-    background-image: linear-gradient(#00cdcd, #008080);
-    animation-name: bounce-1;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-    img {
-      display: none;
-    }
-    button {
-      display: inline;
-    }
-  }
-  .ok-circle:hover {
-    z-index: 0;
-    cursor: pointer;
-    background-image: linear-gradient(#00cdcd, #008080);
-    animation-name: bounce-1;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-    img {
-      display: none;
-    }
-    button {
-      display: inline;
-    }
   }
 }
 
