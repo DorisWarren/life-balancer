@@ -12,7 +12,20 @@ import { UserInfoService } from '../user-info.service';
 })
 export class CategoryDetailComponent   {
 
+  resultsFromDatabase
+  userObject;
+  userObjectId;
+
   constructor(private userInfoService: UserInfoService, private routes: Router) { }
+
+  ngOnInit() {
+    this.getResults();
+
+    if(this.userInfoService.userObject) {
+      this.userObject = this.userInfoService.userObject;
+      this.userObjectId = this.userInfoService.userObject;
+    }
+  }
 
 
   categories: categoriesDetail[] = [
@@ -29,18 +42,10 @@ export class CategoryDetailComponent   {
 
 
     onSubmit() {
+      console.log(this.userObject);
 
-
-      // let data = this.sliderName.value; // get slider data - repeat for each slider
-      //
-      // this.userInfoService.updateWellnessData(data)
-      //     .then(res => {
-      //       this.sliderName.reset();
-      //
-      //     });
-          //userObject doesnt contain firebase metadeta as its created and set locally here
-      // this.userInfoService.userObject = data;
-
-      this.routes.navigate(['/results']);
+      // this.routes.navigate(['/results']);
     }
+    getResults = () =>
+      this.userInfoService.getUserByName().subscribe(res => (this.resultsFromDatabase = res));
 }
