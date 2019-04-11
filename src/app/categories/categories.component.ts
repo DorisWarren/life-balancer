@@ -20,10 +20,10 @@ export class CategoriesComponent{
      }
 
     categories: category[] = [
-      new category('Social', 'description', 'social.png'),
-      new category('Finance', 'description', 'financial.png'),
-      new category('Wellness', 'description', 'wellness.png'),
-      new category('Work', 'description', 'work.png')
+      new category('Social', 'Evaluating the quality of your social life.', 'social.png'),
+      new category('Finance', 'Evaluating your financial health.', 'financial.png'),
+      new category('Wellness', 'Evaluating your wellness. Health | Fitness | Mindfulness ', 'wellness.png'),
+      new category('Work', 'Evaluating your work life.', 'work.png')
 
     ];
     ngOnInit() {
