@@ -44,39 +44,14 @@ export class ResultsComponent implements OnInit {
 
 }
 
-  clickMe() {
-    console.log(this.userObject);
-    //this will update specific user wellness database
-    //need to pass in variable below
-    this.userInfoService.updateWellnessData(8);
-    this.userInfoService.updateSocialData(5);
-    this.userInfoService.updateWorkData(6);
-    this.userInfoService.updateFinanceData(2);
-
-  }
 
   formatDataFin() {
-    let length = this.childUserInfo[0].assessment.length - 1
-    for (let i = 0; i < this.childUserInfo.length; i ++ )
-    if (this.childUserInfo[i].assessment[length].finance >= 8 ) {
-      console.log('good')
-      return "good-circle"
-    } else if (this.childUserInfo[i].assessment[length].finance >= 4 ) {
-      console.log('ok')
-      return "ok-circle"
-    } else {
-      console.log('bad')
-      return "bad-circle"
-    }
-  }
 
-  formatDataSoc() {
-    let length = this.childUserInfo[0].assessment.length - 1
-    for (let i = 0; i < this.childUserInfo.length; i ++ )
-    if (this.childUserInfo[i].assessment[length].social >= 8 ) {
+
+    if (this.userObject.finance >= 8 ) {
       console.log('good')
       return "good-circle"
-    } else if (this.childUserInfo[i].assessment[length].social >= 4 ) {
+    } else if (this.userObject.finance >= 4 ) {
       console.log('ok')
       return "ok-circle"
     } else {
@@ -86,12 +61,25 @@ export class ResultsComponent implements OnInit {
   }
 
   formatDataWell() {
-    let length = this.childUserInfo[0].assessment.length - 1
-    for (let i = 0; i < this.childUserInfo.length; i ++ )
-    if (this.childUserInfo[i].assessment[length].wellness >= 8 ) {
+
+    if (this.userObject.wellness >= 8 ) {
       console.log('good')
       return "good-circle"
-    } else if (this.childUserInfo[i].assessment[length].wellness >= 4 ) {
+    } else if (this.userObject.wellness >= 4 ) {
+      console.log('ok')
+      return "ok-circle"
+    } else {
+      console.log('bad')
+      return "bad-circle"
+    }
+  }
+
+  formatDataSoc() {
+
+    if (this.userObject.social >= 8 ) {
+      console.log('good')
+      return "good-circle"
+    } else if (this.userObject.social >= 4 ) {
       console.log('ok')
       return "ok-circle"
     } else {
@@ -101,12 +89,11 @@ export class ResultsComponent implements OnInit {
   }
 
   formatDataWork() {
-    let length = this.childUserInfo[0].assessment.length - 1
-    for (let i = 0; i < this.childUserInfo.length; i ++ )
-    if (this.childUserInfo[i].assessment[length].work >= 8 ) {
+
+    if (this.userObject.work >= 8 ) {
       console.log('good')
       return "good-circle"
-    } else if (this.childUserInfo[i].assessment[length].work >= 4 ) {
+    } else if (this.userObject.work >= 4 ) {
       console.log('ok')
       return "ok-circle"
     } else {
@@ -114,5 +101,12 @@ export class ResultsComponent implements OnInit {
       return "bad-circle"
     }
   }
+
+
+
+
+
+
+
 
 }

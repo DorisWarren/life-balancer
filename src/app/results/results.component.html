@@ -1,6 +1,7 @@
 
 <app-header></app-header>
 <div class="main">
+  <h1>Results for {{userObject.firstName | titlecase}}</h1>
   <div class="circle-container ">
     <div [class]="formatDataWork()">
       <button type="button" name="button">see more</button>
@@ -19,4 +20,3 @@
       <button type="button" name="button">see more</button>
     </div>
   </div>
-<button (click)="clickMe()">ClickMe</button>

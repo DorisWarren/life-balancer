@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ConfirmationComponent } from '../confirmation/confirmation.component';
-import {categoriesDetail} from '../models/categories-detail.model'
-import {category} from '../models/category.model'
+import {categoriesDetail} from '../models/categories-detail.model';
+import {category} from '../models/category.model';
+
 
 @Component({
   selector: 'app-category-detail',
